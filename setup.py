@@ -28,7 +28,7 @@ setup(
     ],
     python_requires=">=3.8",
     install_requires=[
-        # Dependencies will be handled by ERPNext/Frappe
+        # No dependencies - ERPNext provides everything
     ],
     include_package_data=True,
     zip_safe=False,
