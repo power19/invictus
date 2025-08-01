@@ -1,0 +1,157 @@
+{
+ "charts": [],
+ "content": "[{\"id\":\"_1wq0q9pqr\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">BJJ Dojo Management</span>\",\"col\":12}},{\"id\":\"_4wq0q9pqs\",\"type\":\"card\",\"data\":{\"card_name\":\"Academy\",\"col\":4}},{\"id\":\"_5wq0q9pqt\",\"type\":\"card\",\"data\":{\"card_name\":\"Business\",\"col\":4}},{\"id\":\"_6wq0q9pqu\",\"type\":\"card\",\"data\":{\"card_name\":\"Reports\",\"col\":4}},{\"id\":\"_7wq0q9pqv\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"_8wq0q9pqw\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h5\\\">Quick Actions</span>\",\"col\":12}},{\"id\":\"_9wq0q9pqx\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"New Member\",\"col\":3}},{\"id\":\"_awq0q9pqy\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"New Class\",\"col\":3}},{\"id\":\"_bwq0q9pqz\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Mark Attendance\",\"col\":3}},{\"id\":\"_cwq0q9pq0\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Record Payment\",\"col\":3}}]",
+ "creation": "2024-01-01 00:00:00.000000",
+ "custom_blocks": [],
+ "docstatus": 0,
+ "doctype": "Workspace",
+ "for_user": "",
+ "hide_custom": 0,
+ "icon": "octicon octicon-organization",
+ "idx": 0,
+ "is_hidden": 0,
+ "label": "BJJ Dojo",
+ "links": [
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Dashboard",
+   "link_name": "dojo_dashboard",
+   "link_type": "Page",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Members",
+   "link_name": "Dojo Member",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Classes",
+   "link_name": "Dojo Class",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Attendance",
+   "link_name": "Class Attendance",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Payments",
+   "link_name": "Dojo Payment",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Belt Promotions",
+   "link_name": "Belt Promotion",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  }
+ ],
+ "modified": "2024-01-01 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "BJJ Dojo",
+ "name": "BJJ Dojo",
+ "number_cards": [
+  {
+   "aggregate_function_based_on": "",
+   "color": "#29CD42",
+   "filters_json": "{\"status\":\"Active\"}",
+   "function": "Count",
+   "is_public": 0,
+   "label": "Active Members",
+   "stats_time_interval": "Daily",
+   "document_type": "Dojo Member"
+  },
+  {
+   "aggregate_function_based_on": "amount",
+   "color": "#ffa00a",
+   "filters_json": "{\"status\":\"Completed\",\"payment_date\":[\"timespan\",\"this month\"]}",
+   "function": "Sum",
+   "is_public": 0,
+   "label": "Monthly Revenue",
+   "stats_time_interval": "Daily",
+   "document_type": "Dojo Payment"
+  },
+  {
+   "aggregate_function_based_on": "",
+   "color": "#5e64ff",
+   "filters_json": "{\"class_date\":[\"timespan\",\"today\"]}",
+   "function": "Count",
+   "is_public": 0,
+   "label": "Classes Today",
+   "stats_time_interval": "Daily",
+   "document_type": "Dojo Class"
+  },
+  {
+   "aggregate_function_based_on": "",
+   "color": "#ff5858",
+   "filters_json": "{\"payment_status\":\"Overdue\"}",
+   "function": "Count",
+   "is_public": 0,
+   "label": "Overdue Payments",
+   "stats_time_interval": "Daily",
+   "document_type": "Dojo Member"
+  }
+ ],
+ "owner": "Administrator",
+ "parent_page": "",
+ "public": 1,
+ "quick_lists": [],
+ "roles": [],
+ "sequence_id": 1.0,
+ "shortcuts": [
+  {
+   "color": "Green",
+   "format": "{} New",
+   "label": "New Member",
+   "link_to": "Dojo Member",
+   "stats_filter": "{\"status\": \"Active\"}",
+   "type": "DocType"
+  },
+  {
+   "color": "Blue",
+   "format": "{} New",
+   "label": "New Class",
+   "link_to": "Dojo Class",
+   "stats_filter": "{\"status\": \"Scheduled\"}",
+   "type": "DocType"
+  },
+  {
+   "color": "Orange",
+   "format": "{} Mark",
+   "label": "Mark Attendance",
+   "link_to": "Class Attendance",
+   "stats_filter": "{\"status\": \"Present\"}",
+   "type": "DocType"
+  },
+  {
+   "color": "Purple",
+   "format": "{} Record",
+   "label": "Record Payment",
+   "link_to": "Dojo Payment",
+   "stats_filter": "{\"status\": \"Completed\"}",
+   "type": "DocType"
+  }
+ ],
+ "title": "BJJ Dojo"
+}

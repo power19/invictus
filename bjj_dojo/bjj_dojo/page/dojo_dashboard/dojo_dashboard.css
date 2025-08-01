@@ -1,0 +1,378 @@
+.dojo-dashboard {
+    background-color: #f8f9fa;
+    min-height: 100vh;
+}
+
+.dojo-dashboard .page-head {
+    background: white;
+    border-bottom: 1px solid #e9ecef;
+    padding: 20px 0;
+}
+
+.dojo-dashboard .page-head h1 {
+    font-size: 28px;
+    font-weight: 600;
+    color: #2c3e50;
+    margin: 0;
+}
+
+.dashboard-metrics {
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.metric-card {
+    background: white;
+    border-radius: 12px;
+    padding: 24px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    height: 320px;
+    display: flex;
+    flex-direction: column;
+}
+
+.metric-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.metric-header h3 {
+    font-size: 16px;
+    font-weight: 500;
+    color: #6c757d;
+    margin: 0;
+}
+
+.period-selector {
+    width: auto;
+    min-width: 120px;
+    font-size: 14px;
+    border: 1px solid #e9ecef;
+    border-radius: 6px;
+    padding: 6px 12px;
+}
+
+.metric-value {
+    margin-bottom: 20px;
+}
+
+.metric-value .amount {
+    font-size: 36px;
+    font-weight: 700;
+    color: #2c3e50;
+}
+
+.metric-value .count {
+    font-size: 36px;
+    font-weight: 700;
+    color: #2c3e50;
+}
+
+.metric-chart {
+    flex: 1;
+    position: relative;
+    height: 150px;
+    margin-bottom: 20px;
+}
+
+.metric-actions {
+    margin-top: auto;
+}
+
+.metric-actions .btn-link {
+    color: #007bff;
+    text-decoration: none;
+    font-size: 14px;
+    padding: 0;
+    border: none;
+    background: none;
+}
+
+.metric-actions .btn-link:hover {
+    text-decoration: underline;
+}
+
+.dashboard-content {
+    margin-bottom: 30px;
+}
+
+.recommendations-panel,
+.activity-panel {
+    background: white;
+    border-radius: 12px;
+    padding: 24px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.recommendations-panel h4,
+.activity-panel h4 {
+    font-size: 18px;
+    font-weight: 600;
+    color: #2c3e50;
+    margin-bottom: 20px;
+}
+
+.recommendation-item,
+.activity-item {
+    display: flex;
+    align-items: flex-start;
+    padding: 16px 0;
+    border-bottom: 1px solid #f1f3f4;
+}
+
+.recommendation-item:last-child,
+.activity-item:last-child {
+    border-bottom: none;
+}
+
+.recommendation-avatar,
+.activity-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-right: 12px;
+    flex-shrink: 0;
+}
+
+.recommendation-avatar img,
+.activity-avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.recommendation-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #f8f9fa;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 12px;
+    flex-shrink: 0;
+}
+
+.recommendation-icon i {
+    color: #6c757d;
+    font-size: 16px;
+}
+
+.recommendation-content,
+.activity-content {
+    flex: 1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.recommendation-content p,
+.activity-content p {
+    margin: 0;
+    font-size: 14px;
+    color: #2c3e50;
+    line-height: 1.4;
+}
+
+.recommendation-content .btn,
+.activity-content .btn {
+    margin-left: 12px;
+    flex-shrink: 0;
+}
+
+.panel-footer {
+    margin-top: 20px;
+    padding-top: 16px;
+    border-top: 1px solid #f1f3f4;
+}
+
+.panel-footer .btn-link {
+    color: #007bff;
+    text-decoration: none;
+    font-size: 14px;
+    padding: 0;
+    border: none;
+    background: none;
+}
+
+.quick-stats {
+    margin-bottom: 30px;
+}
+
+.stat-card {
+    background: white;
+    border-radius: 12px;
+    padding: 24px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    height: 100px;
+}
+
+.stat-icon {
+    width: 50px;
+    height: 50px;
+    border-radius: 12px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 16px;
+    flex-shrink: 0;
+}
+
+.stat-icon i {
+    color: white;
+    font-size: 20px;
+}
+
+.stat-content h4 {
+    font-size: 28px;
+    font-weight: 700;
+    color: #2c3e50;
+    margin: 0 0 4px 0;
+}
+
+.stat-content p {
+    font-size: 14px;
+    color: #6c757d;
+    margin: 0;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .metric-card {
+        height: auto;
+        margin-bottom: 20px;
+    }
+    
+    .metric-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+    
+    .period-selector {
+        width: 100%;
+    }
+    
+    .metric-value .amount,
+    .metric-value .count {
+        font-size: 28px;
+    }
+    
+    .stat-card {
+        height: auto;
+        padding: 16px;
+        margin-bottom: 16px;
+    }
+    
+    .stat-content h4 {
+        font-size: 24px;
+    }
+    
+    .recommendation-content,
+    .activity-content {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+    }
+    
+    .recommendation-content .btn,
+    .activity-content .btn {
+        margin-left: 0;
+        align-self: flex-start;
+    }
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+    .dojo-dashboard {
+        background-color: #1a1a1a;
+        color: #ffffff;
+    }
+    
+    .metric-card,
+    .recommendations-panel,
+    .activity-panel,
+    .stat-card {
+        background: #2d2d2d;
+        border: 1px solid #404040;
+    }
+    
+    .metric-header h3,
+    .recommendations-panel h4,
+    .activity-panel h4 {
+        color: #ffffff;
+    }
+    
+    .metric-value .amount,
+    .metric-value .count,
+    .stat-content h4 {
+        color: #ffffff;
+    }
+    
+    .recommendation-content p,
+    .activity-content p {
+        color: #e0e0e0;
+    }
+    
+    .period-selector {
+        background: #2d2d2d;
+        border-color: #404040;
+        color: #ffffff;
+    }
+    
+    .recommendation-item,
+    .activity-item {
+        border-bottom-color: #404040;
+    }
+    
+    .panel-footer {
+        border-top-color: #404040;
+    }
+}
+
+/* Animation for smooth transitions */
+.metric-card,
+.stat-card,
+.recommendations-panel,
+.activity-panel {
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.metric-card:hover,
+.stat-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+}
+
+.recommendation-item:hover,
+.activity-item:hover {
+    background-color: #f8f9fa;
+}
+
+/* Chart container styling */
+.metric-chart canvas {
+    max-height: 150px !important;
+}
+
+/* Button styling */
+.btn-sm {
+    padding: 4px 12px;
+    font-size: 12px;
+    border-radius: 6px;
+}
+
+.btn-primary {
+    background-color: #007bff;
+    border-color: #007bff;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+    border-color: #0056b3;
+}

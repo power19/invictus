@@ -1,0 +1,266 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "naming_series:",
+ "creation": "2024-01-01 00:00:00.000000",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "class_name",
+  "class_type",
+  "skill_level",
+  "column_break_5",
+  "instructor",
+  "assistant_instructor",
+  "max_capacity",
+  "section_break_9",
+  "class_date",
+  "start_time",
+  "end_time",
+  "column_break_13",
+  "duration",
+  "status",
+  "location",
+  "section_break_17",
+  "description",
+  "techniques_covered",
+  "section_break_20",
+  "drop_in_fee",
+  "member_fee",
+  "column_break_23",
+  "total_revenue",
+  "attendance_count",
+  "section_break_26",
+  "notes"
+ ],
+ "fields": [
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "label": "Naming Series",
+   "options": "CLASS-.YYYY.-",
+   "reqd": 1
+  },
+  {
+   "fieldname": "class_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Class Name",
+   "reqd": 1
+  },
+  {
+   "fieldname": "class_type",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Class Type",
+   "options": "Fundamentals\nAdvanced\nCompetition\nOpen Mat\nPrivate Lesson\nSeminar\nKids Class\nWomen's Only",
+   "reqd": 1
+  },
+  {
+   "fieldname": "skill_level",
+   "fieldtype": "Select",
+   "label": "Skill Level",
+   "options": "Beginner\nIntermediate\nAdvanced\nAll Levels"
+  },
+  {
+   "fieldname": "column_break_5",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "instructor",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Primary Instructor",
+   "options": "User",
+   "reqd": 1
+  },
+  {
+   "fieldname": "assistant_instructor",
+   "fieldtype": "Link",
+   "label": "Assistant Instructor",
+   "options": "User"
+  },
+  {
+   "fieldname": "max_capacity",
+   "fieldtype": "Int",
+   "label": "Max Capacity"
+  },
+  {
+   "fieldname": "section_break_9",
+   "fieldtype": "Section Break",
+   "label": "Schedule"
+  },
+  {
+   "fieldname": "class_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Class Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "start_time",
+   "fieldtype": "Time",
+   "in_list_view": 1,
+   "label": "Start Time",
+   "reqd": 1
+  },
+  {
+   "fieldname": "end_time",
+   "fieldtype": "Time",
+   "label": "End Time",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_13",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "duration",
+   "fieldtype": "Int",
+   "label": "Duration (minutes)",
+   "read_only": 1
+  },
+  {
+   "default": "Scheduled",
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Status",
+   "options": "Scheduled\nIn Progress\nCompleted\nCancelled\nPostponed"
+  },
+  {
+   "fieldname": "location",
+   "fieldtype": "Data",
+   "label": "Location/Mat"
+  },
+  {
+   "fieldname": "section_break_17",
+   "fieldtype": "Section Break",
+   "label": "Class Details"
+  },
+  {
+   "fieldname": "description",
+   "fieldtype": "Text Editor",
+   "label": "Class Description"
+  },
+  {
+   "fieldname": "techniques_covered",
+   "fieldtype": "Text",
+   "label": "Techniques Covered"
+  },
+  {
+   "fieldname": "section_break_20",
+   "fieldtype": "Section Break",
+   "label": "Pricing & Stats"
+  },
+  {
+   "fieldname": "drop_in_fee",
+   "fieldtype": "Currency",
+   "label": "Drop-in Fee",
+   "precision": "2"
+  },
+  {
+   "fieldname": "member_fee",
+   "fieldtype": "Currency",
+   "label": "Member Fee",
+   "precision": "2"
+  },
+  {
+   "fieldname": "column_break_23",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "total_revenue",
+   "fieldtype": "Currency",
+   "label": "Total Revenue",
+   "precision": "2",
+   "read_only": 1
+  },
+  {
+   "fieldname": "attendance_count",
+   "fieldtype": "Int",
+   "label": "Attendance Count",
+   "read_only": 1
+  },
+  {
+   "fieldname": "section_break_26",
+   "fieldtype": "Section Break",
+   "label": "Additional Notes"
+  },
+  {
+   "fieldname": "notes",
+   "fieldtype": "Text Editor",
+   "label": "Notes"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [
+  {
+   "link_doctype": "Class Attendance",
+   "link_fieldname": "class"
+  }
+ ],
+ "modified": "2024-01-01 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "BJJ Dojo",
+ "name": "Dojo Class",
+ "naming_rule": "By \"Naming Series\" field",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Dojo Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Dojo Instructor",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Dojo Staff",
+   "share": 1
+  }
+ ],
+ "quick_entry": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "title_field": "class_name",
+ "track_changes": 1,
+ "track_seen": 1,
+ "track_views": 1
+}

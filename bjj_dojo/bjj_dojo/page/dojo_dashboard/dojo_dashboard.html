@@ -1,0 +1,201 @@
+<div class="dojo-dashboard">
+	<div class="page-head">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12">
+					<h1>Dashboard</h1>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="page-content">
+		<div class="container">
+			<!-- Key Metrics Row -->
+			<div class="row dashboard-metrics">
+				<div class="col-md-6">
+					<div class="metric-card earnings-card">
+						<div class="metric-header">
+							<h3>Earnings</h3>
+							<select class="form-control period-selector" id="earnings-period">
+								<option value="1year">1 year</option>
+								<option value="6months">6 months</option>
+								<option value="3months">3 months</option>
+								<option value="1month">1 month</option>
+							</select>
+						</div>
+						<div class="metric-value">
+							<span class="amount" id="total-earnings">$35,214.97</span>
+						</div>
+						<div class="metric-chart">
+							<canvas id="earnings-chart"></canvas>
+						</div>
+						<div class="metric-actions">
+							<button class="btn btn-link" id="recommended-actions">
+								Recommended actions <i class="fa fa-chevron-down"></i>
+							</button>
+						</div>
+					</div>
+				</div>
+				
+				<div class="col-md-6">
+					<div class="metric-card members-card">
+						<div class="metric-header">
+							<h3>Total active members</h3>
+							<select class="form-control period-selector" id="members-period">
+								<option value="6months">6 months</option>
+								<option value="3months">3 months</option>
+								<option value="1month">1 month</option>
+							</select>
+						</div>
+						<div class="metric-value">
+							<span class="count" id="total-members">512</span>
+						</div>
+						<div class="metric-chart">
+							<canvas id="members-chart"></canvas>
+						</div>
+						<div class="metric-actions">
+							<button class="btn btn-link" id="recent-activity">
+								Recent member activity
+							</button>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- Recommendations and Activity Row -->
+			<div class="row dashboard-content">
+				<div class="col-md-6">
+					<div class="recommendations-panel" id="recommendations-panel" style="display: none;">
+						<h4>Recommended actions</h4>
+						<div class="recommendation-list">
+							<div class="recommendation-item">
+								<div class="recommendation-avatar">
+									<img src="/assets/bjj_dojo/images/avatar-placeholder.png" alt="Avatar">
+								</div>
+								<div class="recommendation-content">
+									<p><strong>Follow up with Samantha Robinson</strong> about her first visit</p>
+									<button class="btn btn-sm btn-primary">View</button>
+								</div>
+							</div>
+							
+							<div class="recommendation-item">
+								<div class="recommendation-icon">
+									<i class="fa fa-dollar"></i>
+								</div>
+								<div class="recommendation-content">
+									<p><strong>Resolve past due accounts.</strong> See members who are past due.</p>
+									<button class="btn btn-sm btn-primary">View</button>
+								</div>
+							</div>
+							
+							<div class="recommendation-item">
+								<div class="recommendation-icon">
+									<i class="fa fa-envelope"></i>
+								</div>
+								<div class="recommendation-content">
+									<p><strong>Set up automation email to follow up</strong> with past members</p>
+									<button class="btn btn-sm btn-primary">View</button>
+								</div>
+							</div>
+						</div>
+						<div class="panel-footer">
+							<button class="btn btn-link">Refresh recommendations</button>
+						</div>
+					</div>
+				</div>
+				
+				<div class="col-md-6">
+					<div class="activity-panel" id="activity-panel" style="display: none;">
+						<h4>Recent member activity</h4>
+						<div class="activity-list">
+							<div class="activity-item">
+								<div class="activity-avatar">
+									<img src="/assets/bjj_dojo/images/avatar-placeholder.png" alt="Avatar">
+								</div>
+								<div class="activity-content">
+									<p><strong>Jill Smith</strong> has been charged $300 for her monthly subscription</p>
+									<button class="btn btn-sm btn-primary">View</button>
+								</div>
+							</div>
+							
+							<div class="activity-item">
+								<div class="activity-avatar">
+									<img src="/assets/bjj_dojo/images/avatar-placeholder.png" alt="Avatar">
+								</div>
+								<div class="activity-content">
+									<p><strong>Bob Jones</strong> cancelled his membership and it is expiring today</p>
+									<button class="btn btn-sm btn-primary">View</button>
+								</div>
+							</div>
+							
+							<div class="activity-item">
+								<div class="activity-avatar">
+									<img src="/assets/bjj_dojo/images/avatar-placeholder.png" alt="Avatar">
+								</div>
+								<div class="activity-content">
+									<p><strong>Julia Baker</strong> purchased a $100 gi/jitsu gi in the store</p>
+									<button class="btn btn-sm btn-primary">View</button>
+								</div>
+							</div>
+						</div>
+						<div class="panel-footer">
+							<button class="btn btn-link">View more activity</button>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- Quick Stats Row -->
+			<div class="row quick-stats">
+				<div class="col-md-3">
+					<div class="stat-card">
+						<div class="stat-icon">
+							<i class="fa fa-users"></i>
+						</div>
+						<div class="stat-content">
+							<h4 id="active-members-count">512</h4>
+							<p>Active Members</p>
+						</div>
+					</div>
+				</div>
+				
+				<div class="col-md-3">
+					<div class="stat-card">
+						<div class="stat-icon">
+							<i class="fa fa-calendar"></i>
+						</div>
+						<div class="stat-content">
+							<h4 id="classes-today-count">8</h4>
+							<p>Classes Today</p>
+						</div>
+					</div>
+				</div>
+				
+				<div class="col-md-3">
+					<div class="stat-card">
+						<div class="stat-icon">
+							<i class="fa fa-money"></i>
+						</div>
+						<div class="stat-content">
+							<h4 id="monthly-revenue">$12,450</h4>
+							<p>Monthly Revenue</p>
+						</div>
+					</div>
+				</div>
+				
+				<div class="col-md-3">
+					<div class="stat-card">
+						<div class="stat-icon">
+							<i class="fa fa-trophy"></i>
+						</div>
+						<div class="stat-content">
+							<h4 id="belt-promotions">3</h4>
+							<p>Belt Promotions This Month</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

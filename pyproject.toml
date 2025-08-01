@@ -1,0 +1,26 @@
+[build-system]
+requires = ["flit_core >=3.4,<4"]
+build-backend = "flit_core.buildapi"
+
+[project]
+name = "bjj_dojo"
+authors = [
+    {name = "Dojo Planner", email = "admin@dojoplanner.com"}
+]
+dynamic = ["version", "description"]
+readme = "README.md"
+dependencies = [
+    "frappe>=15.0.0,<16.0.0"
+]
+
+[project.urls]
+Homepage = "https://github.com/dojoplanner/bjj_dojo"
+Repository = "https://github.com/dojoplanner/bjj_dojo.git"
+
+[tool.bench.dev-dependencies]
+coverage = "~6.5.0"
+Faker = "~13.12.1"
+pyngrok = "~5.0.5"
+
+[project.entry-points."frappe.apps"]
+bjj_dojo = "bjj_dojo"

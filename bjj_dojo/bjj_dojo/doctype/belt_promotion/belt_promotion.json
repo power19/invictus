@@ -1,0 +1,217 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "naming_series:",
+ "creation": "2024-01-01 00:00:00.000000",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "member",
+  "member_name",
+  "promotion_date",
+  "column_break_5",
+  "from_belt",
+  "to_belt",
+  "instructor",
+  "section_break_9",
+  "requirements_met",
+  "time_in_previous_belt",
+  "total_classes_attended",
+  "column_break_13",
+  "competition_results",
+  "technical_proficiency",
+  "leadership_qualities",
+  "section_break_17",
+  "notes",
+  "certificate_issued",
+  "ceremony_date"
+ ],
+ "fields": [
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "label": "Naming Series",
+   "options": "PROMO-.YYYY.-",
+   "reqd": 1
+  },
+  {
+   "fieldname": "member",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Member",
+   "options": "Dojo Member",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "member.member_name",
+   "fieldname": "member_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Member Name",
+   "read_only": 1
+  },
+  {
+   "default": "Today",
+   "fieldname": "promotion_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Promotion Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_5",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "member.current_belt",
+   "fieldname": "from_belt",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "From Belt",
+   "options": "White\nBlue\nPurple\nBrown\nBlack\nCoral\nRed",
+   "read_only": 1
+  },
+  {
+   "fieldname": "to_belt",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "To Belt",
+   "options": "White\nBlue\nPurple\nBrown\nBlack\nCoral\nRed",
+   "reqd": 1
+  },
+  {
+   "fieldname": "instructor",
+   "fieldtype": "Link",
+   "label": "Promoting Instructor",
+   "options": "User",
+   "reqd": 1
+  },
+  {
+   "fieldname": "section_break_9",
+   "fieldtype": "Section Break",
+   "label": "Promotion Criteria"
+  },
+  {
+   "default": "0",
+   "fieldname": "requirements_met",
+   "fieldtype": "Check",
+   "label": "All Requirements Met"
+  },
+  {
+   "fieldname": "time_in_previous_belt",
+   "fieldtype": "Int",
+   "label": "Time in Previous Belt (months)"
+  },
+  {
+   "fieldname": "total_classes_attended",
+   "fieldtype": "Int",
+   "label": "Total Classes Attended"
+  },
+  {
+   "fieldname": "column_break_13",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "competition_results",
+   "fieldtype": "Text",
+   "label": "Competition Results"
+  },
+  {
+   "fieldname": "technical_proficiency",
+   "fieldtype": "Select",
+   "label": "Technical Proficiency",
+   "options": "Excellent\nGood\nSatisfactory\nNeeds Improvement"
+  },
+  {
+   "fieldname": "leadership_qualities",
+   "fieldtype": "Select",
+   "label": "Leadership Qualities",
+   "options": "Excellent\nGood\nSatisfactory\nNeeds Improvement"
+  },
+  {
+   "fieldname": "section_break_17",
+   "fieldtype": "Section Break",
+   "label": "Additional Information"
+  },
+  {
+   "fieldname": "notes",
+   "fieldtype": "Text Editor",
+   "label": "Promotion Notes"
+  },
+  {
+   "default": "0",
+   "fieldname": "certificate_issued",
+   "fieldtype": "Check",
+   "label": "Certificate Issued"
+  },
+  {
+   "fieldname": "ceremony_date",
+   "fieldtype": "Date",
+   "label": "Ceremony Date"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-01-01 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "BJJ Dojo",
+ "name": "Belt Promotion",
+ "naming_rule": "By \"Naming Series\" field",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Dojo Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Dojo Instructor",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Dojo Staff"
+  }
+ ],
+ "quick_entry": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "title_field": "member_name",
+ "track_changes": 1,
+ "track_seen": 1,
+ "track_views": 1
+}
