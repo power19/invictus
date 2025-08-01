@@ -3,19 +3,16 @@ requires = ["flit_core >=3.4,<4"]
 build-backend = "flit_core.buildapi"
 
 [project]
-name = "bjj_dojo"
+name = "invictus"
 authors = [
     {name = "Dojo Planner", email = "admin@dojoplanner.com"}
 ]
 dynamic = ["version", "description"]
 readme = "README.md"
-dependencies = [
-    "frappe"
-]
 
 [project.urls]
-Homepage = "https://github.com/dojoplanner/bjj_dojo"
-Repository = "https://github.com/dojoplanner/bjj_dojo.git"
+Homepage = "https://github.com/power19/invictus"
+Repository = "https://github.com/power19/invictus.git"
 
 [tool.bench.dev-dependencies]
 coverage = "~6.5.0"
@@ -23,4 +20,4 @@ Faker = "~13.12.1"
 pyngrok = "~5.0.5"
 
 [project.entry-points."frappe.apps"]
-bjj_dojo = "bjj_dojo"
+invictus = "invictus"
