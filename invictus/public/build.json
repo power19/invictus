@@ -1,0 +1,8 @@
+{
+	"js/invictus.min.js": [
+		"public/js/invictus.js"
+	],
+	"css/invictus.min.css": [
+		"public/css/invictus.css"
+	]
+}

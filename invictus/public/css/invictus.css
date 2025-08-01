@@ -1,0 +1,23 @@
+/* Invictus BJJ Dojo Management System */
+/* Main CSS file */
+
+.invictus-bjj {
+    /* Custom styles for Invictus BJJ */
+}
+
+/* Dashboard specific styles */
+.dojo-dashboard {
+    background-color: #f8f9fa;
+}
+
+/* Member management styles */
+.member-card {
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+/* Class scheduling styles */
+.class-schedule {
+    background: white;
+    border-radius: 8px;
+}
