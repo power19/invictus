@@ -1,0 +1,14 @@
+include README.md
+include LICENSE
+include requirements.txt
+recursive-include bjj_dojo *.py
+recursive-include bjj_dojo *.json
+recursive-include bjj_dojo *.js
+recursive-include bjj_dojo *.css
+recursive-include bjj_dojo *.html
+recursive-include bjj_dojo *.md
+recursive-include bjj_dojo *.txt
+recursive-include bjj_dojo *.yml
+recursive-include bjj_dojo *.yaml
+recursive-exclude bjj_dojo *.pyc
+recursive-exclude bjj_dojo __pycache__
