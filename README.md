@@ -31,7 +31,7 @@ A comprehensive Brazilian Jiu-Jitsu dojo management system built for ERPNext 15.
 
 1. Install the app using bench:
 ```bash
-bench get-app https://github.com/dojoplanner/bjj_dojo.git
+bench get-app https://github.com/power19/invictus.git
 bench install-app bjj_dojo
 ```
 
